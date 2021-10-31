@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 const CreateProject = () => {
   const [category, setCategory] = React.useState('1');
@@ -44,6 +45,18 @@ const CreateProject = () => {
           label="Nama Project"
           placeholder="Nama Project"
         />
+        <Stack component="form" noValidate spacing={3}>
+          <TextField
+            id="date"
+            label="Tanggal Mulai"
+            type="date"
+            defaultValue="2017-05-24"
+            sx={{ width: 220 }}
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        </Stack>
         <TextField
           required
           id="outlined-required"
