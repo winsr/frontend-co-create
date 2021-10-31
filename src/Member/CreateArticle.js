@@ -37,25 +37,25 @@ const CreateArticle = () => {
           <MenuItem value={2}>Go Green</MenuItem>
           <MenuItem value={3}>Sosial Kemanusiaan</MenuItem>
         </Select>
-      </FormControl>
 
-      <TextField
-        required
-        id="outlined-required"
-        label="Required"
-        defaultValue="Judul Artikel"
-      />
-      <TextField
-        id="outlined-multiline-static"
-        label="Multiline"
-        multiline
-        required
-        rows={4}
-        defaultValue="Isi Artikel"
-      />
-      <Button variant="contained" color="success">
-        Buat & Publish Artikel
-      </Button>
+        <TextField
+          required
+          id="outlined-required"
+          label="Required"
+          defaultValue="Judul Artikel"
+        />
+        <TextField
+          id="outlined-multiline-static"
+          label="Multiline"
+          multiline
+          required
+          rows={4}
+          defaultValue="Isi Artikel"
+        />
+        <Button variant="contained" color="success">
+          Buat & Publish Artikel
+        </Button>
+      </FormControl>
     </Box>
   );
 };

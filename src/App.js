@@ -7,6 +7,7 @@ import DashboardAdmin from './Admin/Dashboard';
 import Home from './Member/Home';
 import MyArticle from './Member/MyArcticle';
 import MyProject from './Member/MyProject';
+import CreateProject from './Member/CreateProject';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Home />
       <MyArticle />
       <MyProject />
+      <CreateProject />
     </div>
   );
 }
