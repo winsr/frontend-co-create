@@ -8,6 +8,8 @@ import Home from './Member/Home';
 import MyArticle from './Member/MyArcticle';
 import MyProject from './Member/MyProject';
 import CreateProject from './Member/CreateProject';
+import LoginAdmin from './LandingPages/LoginAdmin';
+import CreateArticle from './Member/CreateArticle';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <MyArticle />
       <MyProject />
       <CreateProject />
+      <LoginAdmin />
+      <CreateArticle />
     </div>
   );
 }

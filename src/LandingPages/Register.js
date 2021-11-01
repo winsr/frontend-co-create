@@ -95,7 +95,7 @@ const Register = () => {
                     fullWidth
                     name="confirmPassword"
                     label="Konfirmasi Password"
-                    type="confirmPassword"
+                    type="password"
                     id="confirmPassword"
                     autoComplete="confirm-password"
                   />
@@ -107,6 +107,7 @@ const Register = () => {
                     id="email"
                     label="Alamat E-mail"
                     name="email"
+                    type="email"
                     autoComplete="email"
                   />
                 </Grid>

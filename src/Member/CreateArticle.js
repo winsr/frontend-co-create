@@ -19,7 +19,7 @@ const CreateArticle = () => {
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
+        '& .MuiTextField-root': { m: 1, width: '70ch' },
       }}
       noValidate
       autoComplete="off"
@@ -42,16 +42,26 @@ const CreateArticle = () => {
           required
           id="outlined-required"
           label="Required"
-          defaultValue="Judul Artikel"
+          placeholder="Judul Artikel"
         />
+
         <TextField
           id="outlined-multiline-static"
-          label="Multiline"
+          label="Isi Artikel"
           multiline
           required
           rows={4}
-          defaultValue="Isi Artikel"
+          placeholder="Isi Artikel"
         />
+        <Button
+          label="Unggah file"
+          variant="outlined"
+          component="label"
+          color="primary"
+        >
+          Upload File
+          <input type="file" hidden />
+        </Button>
         <Button variant="contained" color="success">
           Buat & Publish Artikel
         </Button>

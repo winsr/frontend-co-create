@@ -90,15 +90,7 @@ const Login = () => {
               >
                 Login
               </Button>
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="success"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                Login Admin
-              </Button>
+
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
