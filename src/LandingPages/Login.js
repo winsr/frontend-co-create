@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { Link, useHistory } from 'react-router-dom';
+
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -13,19 +14,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import './login.scss';
 import Logo from '../assets/icons/Logo';
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        PT. Banking Co-Create
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import { useAuthorizedContext } from '../auth/AuthorizedContext';
 
 const theme = createTheme();
 
@@ -38,6 +27,20 @@ const Login = () => {
       email: data.get('email'),
       password: data.get('password'),
     });
+  };
+  const history = useHistory();
+  const { setAuthorizedValue } = useAuthorizedContext();
+  const handleSignInButton = React.useCallback(() => {
+    setAuthorizedValue(true);
+    history.push('/home');
+  }, [setAuthorizedValue, history]);
+
+  const onFinish = (values) => {
+    console.log('Success:', values);
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
   };
 
   return (
@@ -57,7 +60,14 @@ const Login = () => {
             <Typography component="h1" variant="h5">
               Banking Co-Create
             </Typography>
-            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <Box
+              component="form"
+              onSubmit={handleSubmit}
+              noValidate
+              sx={{ mt: 1 }}
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
+            >
               <TextField
                 margin="normal"
                 required
@@ -87,6 +97,7 @@ const Login = () => {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                onClick={handleSignInButton}
               >
                 Login
               </Button>
@@ -105,7 +116,7 @@ const Login = () => {
               </Grid>
             </Box>
           </Box>
-          <Copyright sx={{ mt: 8, mb: 4 }} />
+          {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
         </Container>
       </ThemeProvider>
     </div>

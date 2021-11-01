@@ -79,7 +79,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const mdTheme = createTheme();
 
-function DashboardContent() {
+const DashboardContent = () => {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -133,6 +133,12 @@ function DashboardContent() {
             }}
           >
             <IconButton onClick={toggleDrawer}>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BANK_BRI_logo.svg/320px-BANK_BRI_logo.svg.png"
+                width="180"
+                height="40"
+                alt="logo"
+              />
               <ChevronLeftIcon />
             </IconButton>
           </Toolbar>
@@ -195,8 +201,6 @@ function DashboardContent() {
       </Box>
     </ThemeProvider>
   );
-}
+};
 
-export default function Dashboard() {
-  return <DashboardContent />;
-}
+export default DashboardContent;
