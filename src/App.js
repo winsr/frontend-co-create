@@ -2,16 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.scss';
-import Login from './LandingPages/Login';
-import Register from './LandingPages/Register';
+import Login from './landingpages/Login';
+import Register from './landingpages/Register';
 import DashboardContent from './components/DashboardContent';
-import DashboardAdmin from './Admin/Dashboard';
-import MyArticle from './Member/MyArcticle';
-import MyProject from './Member/MyProject';
-import CreateProject from './Member/CreateProject';
-import LoginAdmin from './LandingPages/LoginAdmin';
-import CreateArticle from './Member/CreateArticle';
-import Home from './Member/Home';
+import DashboardAdmin from './admin/Dashboard';
+import MyArticle from './member/MyArcticle';
+import MyProject from './member/MyProject';
+import CreateProject from './member/CreateProject';
+import LoginAdmin from './landingpages/LoginAdmin';
+import CreateArticle from './member/CreateArticle';
+import Home from './member/Home';
 
 function App() {
   return (
