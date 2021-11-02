@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import './login.scss';
-import RegisterIcon from '../assets/icons/RegisterIcon';
+import RegisterIcon from '../../assets/icons/RegisterIcon';
 
 function Copyright(props) {
   return (
