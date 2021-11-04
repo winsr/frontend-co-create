@@ -147,6 +147,7 @@ const DashboardContent = () => {
           <Divider />
           {/* <List>{secondaryListItems}</List> */}
         </Drawer>
+
         <Box
           component="main"
           sx={{
@@ -161,6 +162,7 @@ const DashboardContent = () => {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+            <p>content here</p>
             <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>

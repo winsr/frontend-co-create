@@ -28,8 +28,11 @@ const Login = () => {
       password: data.get('password'),
     });
   };
+
   const history = useHistory();
+
   const { setAuthorizedValue } = useAuthorizedContext();
+
   const handleSignInButton = React.useCallback(() => {
     setAuthorizedValue(true);
     history.push('/home');

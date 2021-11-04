@@ -12,11 +12,13 @@ import CreateProject from './pages/member/CreateProject';
 import LoginAdmin from './pages/landingpages/LoginAdmin';
 import CreateArticle from './pages/member/CreateArticle';
 import Home from './pages/member/Home';
+import LandingPage from './pages/landingpages';
 
 function App() {
   return (
     <Router>
       <Switch>
+        <LandingPage />
         <Route exact path="/">
           <Login />
         </Route>
@@ -27,19 +29,20 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/member/artikel-saya">
-            <MyArticle />
-          </Route>
-          <Route path="/member/project-saya">
-            <MyProject />
-          </Route>
-          <Route path="/member/buat-project">
-            <CreateProject />
-          </Route>
-          <Route path="/member/buat-artikel">
-            <CreateArticle />
-          </Route>
         </DashboardContent>
+        <Route path="/member/artikel-saya">
+          <MyArticle />
+        </Route>
+        <Route path="/member/project-saya">
+          <MyProject />
+        </Route>
+        <Route path="/member/buat-project">
+          <CreateProject />
+        </Route>
+        <Route path="/member/buat-artikel">
+          <CreateArticle />
+        </Route>
+
         <DashboardAdmin>
           <Route path="/admin">
             <LoginAdmin />
